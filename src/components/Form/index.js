@@ -1,4 +1,5 @@
 import React, { Component} from 'react';
+import Field from '../Field';
 
 class Form extends Component {
   constructor(props){
@@ -10,7 +11,7 @@ class Form extends Component {
       notes: '',
     };
   }
-  
+
   onChangeHandler = (key, value) => {
     this.setState({[key]: value});
   }
@@ -18,12 +19,27 @@ class Form extends Component {
   render(){
     return (
       <form>
-        <input type="text" onChange={(event)} value={this.state.username}></input>
-        <input type="text" onChange={(event)} value={this.state.artist}></input>
-        <input type="text" onChange={(event)} value={this.state.title}></input>
-        <textarea onChange={(event) => this.onChangeHandler('notes', event.target.value)}>
-          {this.state.notes}
-        </textarea>
+        <Field
+          label="Username"
+          onChange={(event) => this.onChangeHandler('username', event.target.value)}
+          value={this.state.username}
+          />
+        <Field
+          label="Artist"
+          onChange={(event) => this.onChangeHandler('artist', event.target.value)}
+          value={this.state.username}
+          />
+        <Field
+          label="Title"
+          onChange={(event) => this.onChangeHandler('title', event.target.value)}
+          value={this.state.username}
+          />
+        <Field
+          label="Notes"
+          onChange={(event) => this.onChangeHandler('notes', event.target.value)}
+          value={this.state.username}
+          fieldType="textarea"
+          />
         <button type="submit">ADD SONG!</button>
       </form>
     )
