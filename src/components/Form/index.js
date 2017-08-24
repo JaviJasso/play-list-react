@@ -27,17 +27,17 @@ class Form extends Component {
         <Field
           label="Artist"
           onChange={(event) => this.onChangeHandler('artist', event.target.value)}
-          value={this.state.username}
+          value={this.state.artist}
           />
         <Field
           label="Title"
           onChange={(event) => this.onChangeHandler('title', event.target.value)}
-          value={this.state.username}
+          value={this.state.title}
           />
         <Field
           label="Notes"
           onChange={(event) => this.onChangeHandler('notes', event.target.value)}
-          value={this.state.username}
+          value={this.state.notes}
           fieldType="textarea"
           />
         <button type="submit">ADD SONG!</button>

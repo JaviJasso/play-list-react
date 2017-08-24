@@ -6,7 +6,7 @@ import './index.css';
 const Navbar = () => (
   <div className="app-header">
     <img src={logo} className="app-logo" alt="logo" />
-    <h2>Welcome to React</h2>
+    <h2>Playlist OCHO</h2>
   </div>
 )
 export default Navbar
