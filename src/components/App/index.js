@@ -15,6 +15,13 @@ class App extends Component {
       songs: [],
     };
   }
+
+  addSong = (song) => {
+    const {songs} = this.state;
+    songs.push(song);
+    this.setState({songs});
+  };
+
   render() {
     return (
       <div className="app">

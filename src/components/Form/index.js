@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import Field from '../Field';
 
+
 class Form extends Component {
   constructor(props){
     super(props);
@@ -11,6 +12,8 @@ class Form extends Component {
       notes: '',
     };
   }
+
+
 
   onChangeHandler = (key, value) => {
     this.setState({[key]: value});
